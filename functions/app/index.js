@@ -18,6 +18,15 @@ export default function expressApp(functionName) {
   const routerBasePath = process.env.NODE_ENV === 'dev' ? `/${functionName}` : `/.netlify/functions/${functionName}/`
 
   /* define routes */
+  
+  router.get('/redirect', (req, res) => {
+      res.redirect('https://morganroman.requestcatcher.com/test');
+  });
+
+  router.post('/redirect', (req, res) => {
+      res.redirect('https://morganroman.requestcatcher.com/test');
+  });
+
   router.get('/', (req, res) => {
     const html = `
     <html>
