@@ -29,48 +29,7 @@ export default function expressApp(functionName) {
 
   router.get('/', (req, res) => {
     const html = `
-    <html>
-      <head>
-        <style>
-          body {
-            padding: 30px;
-          }
-        </style>
-      </head>
-      <body>
-        <h1>Express via '${functionName}' ⊂◉‿◉つ</h1>
-
-        <p>I'm using Express running via a <a href='https://www.netlify.com/docs/functions/' target='_blank'>Netlify Function</a>.</p>
-
-        <p>Choose a route:</p>
-
-        <div>
-          <a href='/.netlify/functions/${functionName}/users'>View /users route</a>
-        </div>
-
-        <div>
-          <a href='/.netlify/functions/${functionName}/hello'>View /hello route</a>
-        </div>
-
-        <br/>
-        <br/>
-
-        <div>
-          <a href='/'>
-            Go back to demo homepage
-          </a>
-        </div>
-
-        <br/>
-        <br/>
-
-        <div>
-          <a href='https://github.com/DavidWells/netlify-functions-express' target='_blank'>
-            See the source code on github
-          </a>
-        </div>
-      </body>
-    </html>
+   <a href="/redirect" >click here</a> 
   `
     res.send(html)
   })
